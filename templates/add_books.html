@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UPLOAD NEW BOOKS</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      color: #555;
+    }
+
+    input[type="file"] {
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>File Upload</h2>
+
+  <form action="upload.php" method="post" enctype="multipart/form-data">
+    <label for="fileInput">Select Book/Video:</label>
+    <input type="file" id="fileInput" name="fileInput" accept="image/*, .pdf, .doc, .docx">
+
+    <button type="submit">Upload File</button>
+  </form>
+
+</body>
+</html>
