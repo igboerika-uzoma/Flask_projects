@@ -56,3 +56,7 @@ def add_book():
 @app.route('/Remove_book')
 def Remove_book():
     return render_template('Remove_book.html')
+
+@app.route('/feedback_')
+def user_input():
+    return input.feedBack.User, {{ User }}
