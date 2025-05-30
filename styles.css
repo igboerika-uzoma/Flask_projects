@@ -2,10 +2,13 @@
 :root {
     --dark-blue: #111184;       /* Deep dark blue */
     --medium-blue: #1e2a78;     /* Medium dark blue */
-    --light-blue: #3a4dbf;      /* Lighter blue for highlights */
-    --accent-blue: #5a7be0;     /* Accent blue for buttons/links */
-    --text-light: #e0e6ff;      /* Light text color */
+    --light-blue: #3a4dbf;      /* Lighter blue */
+    --accent-blue: #5a7be0;     /* Accent blue */
+    --text-light: #e0e6ff;      /* Light text */
     --background-dark: #0b0b3a; /* Very dark blue background */
+    --section-blue-dark: #0f146b;   /* Darker blue for section 1 */
+    --section-blue-medium: #1a237e; /* Medium blue for section 2 */
+    --section-blue-light: #3949ab;  /* Lighter blue for section 3 */
 }
 
 /* Global styles */
@@ -22,7 +25,7 @@ header, footer {
     padding: 15px 0;
     background-color: var(--dark-blue);
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 h1 {
@@ -36,8 +39,36 @@ p {
     color: var(--text-light);
 }
 
-/* Products section */
-#products {
+/* Section styles */
+.product-section {
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+/* Different background colors for each section */
+.section-blue-dark {
+    background-color: var(--section-blue-dark);
+}
+
+.section-blue-medium {
+    background-color: var(--section-blue-medium);
+}
+
+.section-blue-light {
+    background-color: var(--section-blue-light);
+}
+
+/* Section headings */
+.product-section h2 {
+    color: var(--accent-blue);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--accent-blue);
+    padding-bottom: 5px;
+}
+
+/* Products grid */
+.product-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
@@ -58,14 +89,14 @@ p {
 }
 
 .product-name {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 8px;
     color: var(--light-blue);
 }
 
 .price {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 5px 0;
     color: var(--text-light);
 }
@@ -88,11 +119,12 @@ footer p {
     color: #8a9acc;
 }
 
+/* Responsive tweaks */
 @media (max-width: 600px) {
     body {
         padding: 10px;
     }
     .product-name {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 }
